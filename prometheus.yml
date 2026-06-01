@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # هر ۵ ثانیه یکبار دیتای پایتون را بخواند
+
+scrape_configs:
+  - job_name: "fastapi-app"
+    static_configs:
+      - targets: ["host.docker.internal:8042"] # آدرس پورت پایتون تو در ویندوز
